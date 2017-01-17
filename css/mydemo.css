@@ -1,0 +1,179 @@
+html,
+body {
+    height: 100%;
+}
+
+.content {
+    height: 100%;
+    overflow: hidden;
+}
+
+.top {
+    background: #fff;
+    width: 500px;
+    border-radius: 0;
+    margin: 100px auto;
+    height: 500px;
+    transition-property: background, border-radius;
+    transition-duration: 0.5s, 0.5s;
+    /*transition: background 2s;*/
+}
+
+.green {
+    /*background: green;
+    transition: background 2s;*/
+    background: green;
+    border-radius: 50%;
+    transition-property: background, border-radius;
+    transition-duration: 0.5s;
+}
+
+.circle {
+    background: rgb(255, 255, 255);
+    border-radius: 100%;
+    cursor: pointer;
+    position: relative;
+    margin: 0 auto;
+    width: 15em;
+    height: 15em;
+    overflow: hidden;
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+.circle h1 {
+    color: rgba(189, 185, 199, 0);
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+    font-size: 1.6em;
+    line-height: 8.2em;
+    text-align: center;
+    text-transform: uppercase;
+    /*文字大写*/
+    -webkit-font-smoothing: antialiased;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    /*蚊子不可被选中*/
+    -webkit-transition: color 0.8s ease-in-out;
+    -moz-transition: color 0.8s ease-in-out;
+    -ms-transition: color 0.8s ease-in-out;
+    transition: color 0.8s ease-in-out;
+}
+
+.circle:before,
+.circle:after {
+    border-radius: 100%;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    box-shadow: inset 10.6em 0 0 rgba(30, 140, 209, 0.2), inset 0 10.6em 0 rgba(30, 140, 209, 0.2), inset -10.6em 0 0 rgba(30, 140, 209, 0.2), inset 0 -10.6em 0 rgba(30, 140, 209, 0.2);
+    -webkit-transition: box-shadow 0.75s;
+    -moz-transition: box-shadow 0.75s;
+    -ms-transition: box-shadow 0.75s;
+    transition: box-shadow 0.75s;
+}
+
+.circle:after {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.circle:hover:before,
+.circle:hover:after {
+    box-shadow: inset 0.86em 0 0 rgba(255, 0, 0, 0.5), inset 0 0.86em 0 rgba(252, 150, 0, 0.5), inset -0.86em 0 0 rgba(0, 255, 0, 0.5), inset 0 -0.86em 0 rgba(0, 150, 255, 0.5);
+}
+
+.circle:hover > h1 {
+    color: rgba(185, 185, 185, 1);
+}
+
+
+/*雪碧图动画*/
+
+.animation {
+    margin: 50px auto;
+    width: 320px;
+    height: 428px;
+    background: url(../images/animate.png);
+    /*写法2*/
+    /*-webkit-animation-name: bird-slow;
+    -webkit-animation-duration: 800ms;
+    -webkit-animation-timing-function: steps(7);
+    -webkit-animation-iteration-count: infinite;*/
+    -webkit-animation: bird-slow 2s steps(7) infinite;
+}
+
+@keyframes bird-slow {
+    0% {background-position-x: -0px}
+    100% {background-position-x: -2240px}
+}
+
+/*tab*/
+.myTab {
+    width: 600px;
+    margin: 100px auto;
+}
+
+.hd-containber {
+    height: 100px;
+}
+
+.hd-item {
+    float: left;
+    width: 194px;
+    height: 94px;
+    border: 3px solid #333;
+    line-height: 100px;
+    text-align: center;
+}
+
+.hd-item.hd-cur {
+    border-bottom: none;
+}
+
+.bd-container {
+    height: 300px;
+}
+
+.bd-item {
+    height: 100%;
+    line-height: 300px;
+    text-align: center;
+}
+
+.item1 {
+    background-color: red;
+}
+
+.item2 {
+    background-color: green;
+}
+
+.item3 {
+    background-color: blue;
+}
+
+.hd2 {
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    margin: 100px auto;
+}
+
+.bd2 {
+    width: 100px;
+    height: 100px;
+    margin: 100px auto;
+}
+
+.hd2.hd2-cur {
+    background-color: #f67300;
+}
